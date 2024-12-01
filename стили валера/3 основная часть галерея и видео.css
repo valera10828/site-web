@@ -1,0 +1,142 @@
+/* Стили для галереи */
+.container-gallery{
+    font-family: Tahoma,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 ;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    background-color: rgba(218, 172, 134, 0.59);
+}
+.panel-gallery-1{
+    background-image: url("https://cdn.culture.ru/images/3f51e22c-edba-513c-af52-826c43177d42");
+}
+.panel-gallery-2{
+    background-image: url("https://wallpapers.com/images/hd/yellowstone-river-nature-photography-l8y2l1lzprzn9gc3.jpg");
+}
+
+.panel-gallery-3{
+    background-image: url("https://avatars.mds.yandex.net/i?id=ad55482ab186a2697278159c9a20f368_l-5221954-images-thumbs&n=13");
+}
+
+.panel-gallery-4{
+    background-image: url("https://i.pinimg.com/originals/e5/ea/48/e5ea48eeeabbd0bf9fcb14c4d8e0240f.jpg");
+}
+.panel-gallery-5{
+    background-image: url("https://cdn.culture.ru/images/6947b69c-8b41-5a13-a36f-44ecb6801dc9");
+}
+.panel-gallery{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 7%;
+    position: relative;
+    transition: width 1s ease;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.container-gallery h3{
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    opacity: 0;
+    right: 0;
+    top:80vh;
+}
+
+.panel-gallery.active-1{
+    width: 70%;
+}
+
+.panel-gallery.active-1 h3{
+    opacity: 1;
+    transition: opacity 0.7s ease 0.4s;
+}
+/* Стили для видео контейнера */
+.container-video{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.effect{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-color: #292e33;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+.effect.fade-out {
+    opacity: 1;
+}
+.navigation-video{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navigation-video li{
+    list-style: none;
+    cursor: pointer;
+margin: 0 10px;
+    border-radius: 4px;
+    padding: 3px 3px 0;
+
+}
+
+.navigation-video li img{
+    transition: all 0.7s ease;
+    width: 200px;
+    height: 100px;
+    opacity: 0.7;
+    border-radius: 10%;
+    border: 5px solid #fff;
+}
+
+.navigation-video li img:hover{
+    width: 350px;
+    opacity: 1;
+    height: 200px;
+}
+#video-1{
+position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 1s ease-in-out;
+}
+
+#video-1.hidden {
+    opacity: 0;
+}
+
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

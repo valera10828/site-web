@@ -1,0 +1,65 @@
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Новые стили для прогресс-индикатора */
+.progress-indicator {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.progress-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(248, 252, 255, 0.84);
+    margin: 10px 0;
+    transition: background 0.3s ease;
+}
+
+.progress-dot.active {
+    background: #221f1f;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.progress-dot.filled {
+    background: rgba(22, 168, 216, 0.84);
+}
+
+@media (max-width: 768px) {
+    .slide-content {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .swiper-navigation-btn {
+        padding: 8px 15px;
+        margin: 0 5px;
+    }
+
+    .progress-indicator {
+        right: 15px;
+    }
+
+    .progress-dot {
+        width: 10px;
+        height: 10px;
+        margin: 8px 0;
+    }
+}
